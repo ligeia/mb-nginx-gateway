@@ -19,3 +19,5 @@ cp nginx.conf mb_gateway/
 ## Make sure the upstream mb_mirror (in nginx.conf # ---- Upstreams ---- ) points to your MusicBrainz mirror's address and port
 
 docker compose -f docker-compose.yml up -d
+
+Now point any scripts you use to the mb_gateway instead of directly to the mirror. In this case, rather than pointing to localhost:5000, you would point to localhost:5110. If you don't want to use 5110 for the gateway, change that in the docker-compose.yml file before your docker compose pull.
