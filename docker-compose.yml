@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  mb-gateway:
+    image: nginx:1.27-alpine
+    container_name: mb-gateway
+    ports:
+      - "5110:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # Persist logs to the host so you can `tail -f logs/access.log` from outside the container.
+      - ./logs:/var/log/nginx
+    # Linux only: let container reach your host mirror.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
