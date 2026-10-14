@@ -6,7 +6,7 @@ This was built by Claude Opus 4.5. I am not actively maintaining it but may be a
 
 Setup
 
-mkdir mb_gatway
+mkdir mb_gateway
 
 cp docker-compose.yml mb_gateway/
 
