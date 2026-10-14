@@ -2,6 +2,9 @@ This nginx-based gateway is designed to help users who want to use a MusicBrainz
 
 It was also designed for mirrors without Solr enabled. When you submit a query that depends on Solr, it will again route to production instead.
 
+This was built by Claude Opus 4.5. I am not actively maintaining it but may be able to provide basic support if you open an Issue.
+
+Setup
 
 mkdir mb_gatway
 
